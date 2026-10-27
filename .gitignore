@@ -1,0 +1,6 @@
+# Arquivos de ambiente/configurações sensíveis
+.env
+*.key
+
+# Logs
+*.log

@@ -1,0 +1,19 @@
+services:
+  evolution-api:
+    container_name: evolution-api
+    image: evoapicloud/evolution-api:v2.3.7
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      - evolution-instances:/evolution/instances
+    mem_limit: 800m
+    networks:
+      - cisbaf_network_apps
+
+volumes:
+  evolution-instances:
+
+networks:
+  cisbaf_network_apps:
+    external: true
